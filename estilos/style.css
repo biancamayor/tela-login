@@ -32,14 +32,14 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     background-color: white;
     width: 250px;
-    height: 515px;
+    height: 530px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.655);
 
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease; /* Dar uma suavizada na animação, para que ela não acelere e desacelere na mesma velocidade */
 }
@@ -64,10 +64,12 @@ div#formulario > h1{
 
 div#formulario > p{
     font-size: 0.8em;
+    margin-bottom: 20px;
 }
 
 form > div.campo{
-    background-color: #454444;
+    background-color: #737373;
+    border: 2px solid #737373;
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -76,6 +78,28 @@ form > div.campo{
 
 form label{
     display: none;
+}
+
+div.campo > span{
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color: #d9d9d9;
+    color: white;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    transform: translateY(-12px);
+}
+
+div.campo > input:focus-within{
+    background-color: white;
 }
 
 form > input[type=submit]{
@@ -88,6 +112,7 @@ form > input[type=submit]{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 22px;
 }
 
 form > input[type=submit]:hover{
